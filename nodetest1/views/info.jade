@@ -1,0 +1,131 @@
+extends _bootstrap
+append styles
+        // Custom styles for this template
+        link(href='../stylesheets/blog.css', rel='stylesheet')
+        link(href='../stylesheets/forum.css', rel='stylesheet')
+        link(href='../stylesheets/Info.css', rel ='stylesheet')
+block body
+        .navbar-wrapper
+                .container
+                        nav.navbar.navbar-inverse.navbar-static-top
+                                .container
+                                        .navbar-header
+                                                button(type="button" ,class="navbar-toggle collapsed", data-toggle="collapse", data-target="#navbar" ,aria-expanded="false", aria-controls="navbar")
+                                                        span.sr-only Toggle navigation
+                                                        span.icon-bar
+                                                        span.icon-bar
+                                                        span.icon-bar        											
+                                                a(class="navbar-brand", href="#") IU-Know
+                                        #navbar.navbar-collapse.collapse
+                                                ul.nav.navbar-nav
+                                                        li
+                                                                a(href="http://localhost:3000/home") Home						
+                                                        li
+                                                                a(href="http://localhost:3000/gallery") Gallery
+                                                        li
+                                                                a(href="http://localhost:3000/forum") Forum
+                                                        li
+                                                                a(href="http://localhost:3000/contact") Contact Us
+                .container
+                        .row
+                                .col-sm-8.blog-main
+                                        .blog-post
+                                                h3 Essentials
+                                                hr
+                                                h2 Get Your ID card
+                                                p
+                                                        | Student ID card is the most imortant thing here in IU plus bus rides here are free with ID cards so try and get it done as soon as possible
+                                                        You will be given a time slot in which you have to go to Eigenmann Hall and get the formalities done (hardly takes 10 minutes!).
+                                                        Once you have the ID, you can go Sports Recreation Center and get your gym pass.
+                                                br
+                                                h2 Open a Bank Account
+                                                p  
+                                                |The bank that is hot favourite among people over here is Chase which is located at 2642 E. 3rd Street. 
+                                                You can catch a 9 route bus to reach there which has a stop in front of the bank.
+                                                p
+                                                | Documents Required to open a checking account:			       
+                                                ul
+                                                        li Passport
+                                                        li Student ID card
+                                                        li I-20
+                                                        li Univeristy Admission Letter
+                                                br
+                                                h2 Accomodation 
+                                                h4 If you already have a house
+                                                p
+                                                        | If you have already have an arrangement where to live and have a signed a lease then you should talk to the leasing office just to make sure when you arrive in Bloomington you have your house ready to move in. There have been some cases where people having arrived here found out there house wasn't ready to move in to. Therefore it's very necessary to communicate clearly. 
+                                                h4 Haven't found a place to live yet
+                                                p
+                                                        | If you came to Bloomington and still have to find roommates and sign a lease for a new place then don't panic. Here are some steps that you can follow.
+                                                ul
+                                                        li Book a room in a lodging near 3rd Street for a night or two, it's reasonable and at a convenient distance from the campus.
+                                                        li Talk to some seniors or your incoming classmates if they can help you out with temporary accomodation till you find a place of your own to live. 
+                                                        li Visit the housing complexes near the west or the east side of the campus and go and take a look at the different house options pertaining to your needs. 
+                                                        li Here are some of the common housing options preferred by international students.
+                                                        ul
+                                                                li Hoosier Courts
+                                                                li Park Doral 
+                                                                li Fountain Park 
+                                                                li Crescent Park 
+                                                                li Smallwood Plaza
+                                                                li Ambasssdor Apartments
+                                                                li Woodbridge 
+                                                p(style='float: left; font-size: 9pt; text-align: center; width: 19%; margin-right: 0.5%; margin-bottom: 0.5em;')
+                                                        img(src='../images/HoosierCourts.asp.jpeg', style='width: 100%; height: 100px')
+                                                        | Hoosier Courts 
+                                                p(style='float: left; font-size: 9pt; text-align: center; width: 19%; margin-right: 0.5%; margin-bottom: 0.5em;')
+                                                        img(src='../images/ParkDoral.jpeg', style='width: 100%; height: 100px')
+                                                        | Park Doral
+                                                p(style='float: left; font-size: 9pt; text-align: center; width: 19%; margin-right: 0.5%; margin-bottom: 0.5em;')
+                                                        img(src='../images/Fountain Park Apartment 3.jpg', style='width: 100%; height: 100px')
+                                                        | Fountain Park
+                                                p(style='float: left; font-size: 9pt; text-align: center; width: 19%; margin-right: 0.5%; margin-bottom: 0.5em;')
+                                                        img(src='../images/SmallWood.jpg', style='width: 100%; height: 100px')
+                                                        | Small Wood Plaza
+                                                p(style='float: left; font-size: 9pt; text-align: center; width: 19%; margin-right: 0.5%; margin-bottom: 0.5em;')
+                                                        img(src='../images/Woodbridge.jpg', style='width: 100%; height: 100px')
+                                                        | Woodbridge 
+                                                p(style='clear: both;')           
+                                                br
+                                                h3 Well! Lets talk about something fun now!
+                                                hr
+                                                h2 Food in Btown
+                                                p
+                                                        | If one thing we can be sure about people over here is that they love their food and drinks! Bloomington offers a wide array of food choices that can cater to everyone's food pallette. We've got the amazing milkshakes at Steak n' Shake to amazing fries and burgers at Nick's Hut and Chocolate Moose, you abolutely have got to try the ice cream at Moose! Plus there's a nationwide app that is taking this University town by storm, called Hooked! It hooks you with discounts and offers at a lot of places making food cheap and accessible to student population. Who wouldn't mind saving some bucks on food, right huh ? 
+                                                p(style='float: left; font-size: 9pt; text-align: center; width: 23%; margin-right: 1%; margin-bottom: 0.5em;')
+                                                        img(src='../images/Anotolia.jpg', style='width: 100%;  height: 100px')
+                                                        | Anotolia 
+                                                p(style='float: left; font-size: 9pt; text-align: center; width: 23%; margin-right: 1%; margin-bottom: 0.5em;')
+                                                        img(src='../images/Soma.jpg', style='width: 100%;  height: 100px')
+                                                        | Soma Cafe
+                                                p(style='float: left; font-size: 9pt; text-align: center; width: 23%; margin-right: 1%; margin-bottom: 0.5em;')
+                                                        img(src='../images/kilroys.jpg', style='width: 100%; height: 100px')
+                                                        | Kilroy Sports
+                                                p(style='float: left; font-size: 9pt; text-align: center; width: 23%; margin-right: 1%; margin-bottom: 0.5em;')
+                                                        img(src='../images/TasteOfIndia.jpg', style='width: 100%; height: 100px')
+                                                        | Taste Of India 
+                                                p(style='clear: both;')
+                                                br
+                                                h2 Beauty of Bloomington 
+                                                p
+                                                        | Indiana University has been constantly rated as one of the most beautiful university campus throughout States. The open spaces here and surrounding places nearby, the trails, Lakes are breathtakingly beautiful. And, the campus looks like it's just out of a Harry Potter movies. The buildings here looks a lot like Hogwarts. It's truly majestic. The winters here are quite cold but the setting is quite visually stunning. Some of the places to visit while you are here:
+                                                ul
+                                                        li Lake Monroe
+                                                        li Brown County Trails
+                                                        li Fairfax State Recreation Center
+                                                p
+                                                        | Don't forget to check out our Gallery page!
+                                                br										  
+                                                h2 Orientation and Other Events
+                                                p
+                                                        | There is a week long or so welcome week for the new students and international students have their own international orientataion which has a lot of cool events being held at different parts of the campus. This is a really cool way of mingling with the crowd and getting to know about the place a bit more. And the best part, there's always free pizza or something! So try and attend these events. 
+                                                p
+                                                        | The biggest event held for the international students is the BISM's furniture give away for which you have to register yourslef. BISM makes sure students should feel at home here and give away furniture, cutlery, food appliances and deliver it to your doorsteps for free. Yes you read it correct, all of this for free! Wherever you are, whatever you are doing, don't miss this one! 				
+                                                h2 Upcoming Events
+                                                p
+                                                        | Dont miss these events near you!
+                                                ul
+                                                        each e in eventname
+                                                                li=e.eventname			
+                            .col-sm-3.col-sm-offset-1.blog-sidebar
+                                    .sidebar-module.sidebar-module-inset

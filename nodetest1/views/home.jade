@@ -1,0 +1,126 @@
+extends _bootstrap
+append styles
+	// Custom styles for this template 
+	link(href='../stylesheets/carousel.css', rel='stylesheet')
+block body
+	.navbar-wrapper
+		.container
+			nav.navbar.navbar-inverse.navbar-static-top
+				.container
+					.navbar-header
+						button(type="button" ,class="navbar-toggle collapsed", data-toggle="collapse", data-target="#navbar" ,aria-expanded="false", aria-controls="navbar")
+							span.sr-only Toggle navigation
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						
+						a(class="navbar-brand", href="") IU-Know
+					#navbar.navbar-collapse.collapse
+						ul.nav.navbar-nav
+							li.active
+								a(href="#") Home
+							
+							li
+								a(href="http://localhost:3000/gallery") Gallery
+							li
+								a(href="http://localhost:3000/forum-faq") Forum
+							li
+								a(href="http://localhost:3000/contact") Contact Us
+							li
+								a(href="")
+							li
+								a(href="")
+							li
+								a(href="")
+							li
+								a(href="")
+							li
+								a(href="")
+							li
+								a(href="")
+							li
+								a(href="")
+							li
+								a(href="")
+							li
+								a(href="")
+							li
+								a(href="")
+							li
+								a(href="")
+							li
+								a(href="")
+							li
+								a(href="")
+							li
+								a(href="http://localhost:3000/login") Welcome, #{locals.userId}!
+							li
+								form(method='POST', action='/logout', novalidate='novalidate')
+									button#Black(style='background-color:#262626; border:1px solid #262626;border-radius:4px;color:#ffffff;line-height:40px;text-align:center;',type='submit' ) #{locals.logout}
+											
+	// Carousel
+	// ==================================================
+	+carousel("myCarousel",[{image:"../images/image1.jpg",h1:"Sign up today to learn how to be a HOOSIER",p:"And connect with fellow Hoosiers!", button:{caption:"Sign up today",url:"http://localhost:3000/signup"}},{image:"../images/image11.jpg",h1:"Read the articles! They can be helpful!",p:"Don't panic if you haven't figured out everything before coming to Bloomington. We are here to help!",button:{caption:"Learn more",url:"http://localhost:3000/info"}},	{image:"../images/image33.jpg",h1:"One more for good measure.",p:"Indiana campus and Bloomington in general are picturesque! Check out the images by talented IU student, Stephy Matthew! PS: Don't miss the stunning sunsets!",button:{caption:"Browse gallery",url:"http://localhost:3000/gallery"}}])
+	//  Marketing messaging and featurettes
+	//  ==================================================
+	// Wrap the rest of the page in another container to center all the content.
+	.container.marketing
+		// Three columns of text below the carousel
+		.row
+			.col-lg-4
+				img.img-circle(src='../images/image1.jpg', alt='Generic placeholder image', width='140', height='140')
+				h2 Check out our Blogpost
+				p
+					| Our Blogpost covers all the information one needs to know about starting life at Bloomoington
+				p
+					a.btn.btn-default(href='#http://localhost:3000/info', role='button') View details »
+			.col-lg-4
+				img.img-circle(src='../images/image2.jpg', alt='Generic placeholder image', width='140', height='140')
+				h2 Disuss among Friends
+				p
+					| Have Questions ? Start a trending discussion or join one to help! 
+				p
+					a.btn.btn-default(href='http://localhost:3000/forum', role='button') View details »
+			.col-lg-4
+				img.img-circle(src='../images/image3.jpg', alt='Generic placeholder image', width='140', height='140')
+				h2 Contact us
+				p
+					| Reach out to us for any questions or feedback. We would love to hear from all of you.
+				p
+					a.btn.btn-default(href='http://localhost:3000/contact', role='button') View details »
+		// START THE FEATURETTES
+		hr.featurette-divider
+		.row.featurette
+			.col-md-7
+				h2.featurette-heading
+					| Friday Late Nights. 
+					span.text-muted It'll blow your mind.
+				p.lead
+					| Indiana Memorial Union (or IMU as folks call it over here) is the place where it all happens on Friday nights. If you love bowling or just rather hit some pool, this is the place to be! There's a live band playing on the nights and people playing board games. And, there's Karoke too! Now who doesn't love Karoke nights! Trust me there's no place else you'd rather be on a Friday night.
+			.col-md-5
+				img.featurette-image.img-responsive.center-block(src='../images/image5.jpg', alt='Generic placeholder image')
+		hr.featurette-divider
+		.row.featurette
+			.col-md-7.col-md-push-5
+				h2.featurette-heading
+					| Oh yeah, it's that good. 
+					span.text-muted See for yourself.
+				p.lead
+					| Little 500! One of the greatest college weeks in America! It's a week long festival with events and parties going on all parts of the campus. It culminates with a Men & Women bike races followed by a concert. It's basically an excuse for folks here to party and have a good time! Fun awaits!  
+			.col-md-5.col-md-pull-7
+				img.featurette-image.img-responsive.center-block(src='../images/image2.jpg', alt='Generic placeholder image')
+		hr.featurette-divider
+		.row.featurette
+			.col-md-7
+				h2.featurette-heading
+					| And lastly, this one. 
+					span.text-muted Checkmate.
+				p.lead
+					| Basketball! What can we say about this now! Basketball is like a relegion over here with everyone tuned in to their tv sets apart from those who go and support the Hoosier team on the pitch. Beleive me Hoosier team is one of the best and people here take pride in their team. It's like a fever that grips the university when the season is on. You can be a part of this madness too. GO HOOSIERS!  
+			.col-md-5
+				img.featurette-image.img-responsive.center-block(src='../images/image4.jpg', alt='Generic placeholder image')
+		hr.featurette-divider
+		// /END THE FEATURETTES
+
+
+

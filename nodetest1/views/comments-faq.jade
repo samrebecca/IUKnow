@@ -1,0 +1,36 @@
+extends _bootstrap
+append styles
+  // Custom styles for this template 
+  link(href='../stylesheets/comments.css', rel='stylesheet')
+block body
+  .container
+      .row
+          .col-md-12
+            .panel.panel-info
+              .panel-heading
+                | Comments
+              |         
+              .panel-body.comments
+              form(method='POST', action='/postcomment', novalidate='novalidate')
+                textarea.form-control(name ='comment' placeholder='Write your comment', rows='5')
+                |           
+                br
+                |           
+                button.btn.btn-info.pull-right(type='submit') Submit comment
+                |           
+                .clearfix
+                |           
+                hr
+                |         
+                ul.media-list
+                    each b in bank   
+                        li.media
+                            a.pull-left(href='#')
+                                img.img-circle(src='https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/256/User_Accounts_alt.png',height='50px',width='50px' alt='')
+                            |                 
+                            .media-body
+                                strong.text-success=b.username                
+                                p=b.comment
+                                
+                            |                 
+                            .clearfix

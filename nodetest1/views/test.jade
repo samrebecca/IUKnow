@@ -1,0 +1,96 @@
+extends _bootstrap
+append styles
+	// Custom styles for this template 
+	link(href='../stylesheets/carousel.css', rel='stylesheet')
+block body
+	.navbar-wrapper
+		.container
+			nav.navbar.navbar-inverse.navbar-static-top
+				.container
+					.navbar-header
+						button(type="button" ,class="navbar-toggle collapsed", data-toggle="collapse", data-target="#navbar" ,aria-expanded="false", aria-controls="navbar")
+							span.sr-only Toggle navigation
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						
+						a(class="navbar-brand", href="") IU-Know
+					#navbar.navbar-collapse.collapse
+						ul.nav.navbar-nav
+							li.active
+								a(href="#") Home
+							
+							li
+								a(href="http://localhost:3000/gallery") Gallery
+							li
+								a(href="http://localhost:3000/forum") Forum
+							li
+								a(href="http://localhost:3000/contact") Contact Us
+							li
+								a(href="")
+							li
+								a(href="")
+							li
+								a(href="")
+							li
+								a(href="")
+							li
+								a(href="")
+							li
+								a(href="")
+							li
+								a(href="")
+							li
+								a(href="")
+							li
+								a(href="")
+							li
+								a(href="")
+							li
+								a(href="")
+							li
+								a(href="")
+							li
+								a(href="")
+							li
+								a(href="http://localhost:3000/login") Welcome, #{locals.userId}!
+							li
+								form(method='POST', action='/logout', novalidate='novalidate')
+									button#Black(style='background-color:#262626; border:1px solid #262626;border-radius:4px;color:#ffffff;line-height:40px;text-align:center;',type='submit' ) #{locals.logout}
+	.container-fluid
+		.row
+			.col-sm-3.col-md-2.sidebar
+				ul.nav.nav-sidebar
+					li.active
+						a(href='http://localhost:3000/forum')
+							| FAQ 
+							span.sr-only (current)
+					li
+						a(href='http://localhost:3000/forum-house') Housing
+					li
+						a(href='http://localhost:3000/forum-class') Classes
+			.col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
+				h1.page-header Welcome, Admin!
+				h2.sub-header List of Users
+				.table-responsive
+					table.table.table-striped
+						thead
+						
+							tr
+								th #
+								th Username
+								th Email
+								th Password
+								th Delete
+						tbody
+						each user, i in userlist
+							tr 
+								td= i+1
+								td= user.username
+								td= user.email
+								td= user.pwd
+								td
+									form(method='POST', action='/delete', novalidate='novalidate')
+										input(type='hidden' name='username' value='#{user.username}') 
+										button.btn.btn-danger(href="" type='submit' ) Delete
+																					

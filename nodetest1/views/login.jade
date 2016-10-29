@@ -1,0 +1,36 @@
+extends _bootstrap
+append stylesheets
+  link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css', rel='stylesheet')
+block body
+  div(style='background-image: url(../images/Grey.jpg);')
+      a(href="localhost:3000/home") Go back Home
+      #login-overlay.modal-dialog
+        .modal-content
+          .modal-header              
+            h4#myModalLabel.modal-title Please login to access the forum!          
+          .modal-body
+            .row
+              .col-xs-12
+                .well
+                  form#loginForm(method='POST', action='/auth', novalidate='novalidate')
+                    .form-group
+                      label.control-label(for='username') Username
+                      |                                   
+                      input#username.form-control(type='text', name='username', value='', required='', title='Please enter you username', placeholder='example')
+                      |                                   
+                      span.help-block
+                    |                               
+                    .form-group
+                      label.control-label(for='password') Password
+                      |                                   
+                      input#password.form-control(type='password', name='password', value='', required='', title='Please enter your password')
+                      |                                   
+                      span.help-block
+                    |                               
+                    #loginErrorMsg.alert.alert-error.hide Wrong username or password
+                    |                               
+                  
+                    |                               
+                    button.btn.btn-success.btn-block(type='submit') Login
+                    a(class='button.btn.btn-block' href='http://localhost:3000/home' ) Cancel
+                  

@@ -1,0 +1,15 @@
+extends _bootstrap
+
+block body
+	h1.
+		Sign In
+	form#formAddUser(name="adduser",method="post",action="/adduser")
+		input#inputUserName(type="text", placeholder="username", name="username")
+		input#inputUserEmail(type="text", placeholder="useremail", name="useremail")
+		button#btnSubmit(type="submit") submit
+	h1.
+		Gallery
+	ul
+		each image in images
+			li
+				img(src='/images/#{image.images}', width='150', height='150')
